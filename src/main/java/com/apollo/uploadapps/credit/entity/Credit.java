@@ -44,6 +44,7 @@ public class Credit {
     @Column(name = "Status")
     private String status;
 
+
     @Column(name = "Alasan")
     private String alasan;
 
