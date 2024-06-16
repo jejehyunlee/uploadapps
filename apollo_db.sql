@@ -22,11 +22,6 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `mst_credit`;
 CREATE TABLE `mst_credit`  (
-  `created_by` int NOT NULL,
-  `is_delete` tinyint NOT NULL,
-  `jumlah` int NULL DEFAULT NULL,
-  `modified_by` int NULL DEFAULT NULL,
-  `created_date` datetime(6) NOT NULL,
   `id` bigint NOT NULL AUTO_INCREMENT,
   `modified_date` datetime(6) NULL DEFAULT NULL,
   `alasan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -37,6 +32,11 @@ CREATE TABLE `mst_credit`  (
   `rek_tujuan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `tgl_efektif` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `created_by` int NOT NULL,
+  `is_delete` tinyint NOT NULL,
+  `jumlah` int NULL DEFAULT NULL,
+  `modified_by` int NULL DEFAULT NULL,
+  `created_date` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
